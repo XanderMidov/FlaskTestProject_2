@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fucking good web application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+{% block nav_main %}
+    <div id="nav_main">
+        {% block nav_dynamic %}
+            {% import "nav_macro_file.html" as macrosnav %}
+            <div class="nav_div">{{ macrosnav.nav_macro(nav_dict_t) }}</div>
+        {% endblock %}
+        {% block nav_static %}
+            <div class="nav_div">{% include "my_test_links.html" %}</div>
+        {% endblock %}
+    </div>
+{% endblock %}
+    <div id="content">
+        {% block content %}
+        {{ content_t|safe }}
+        {% endblock %}
+    </div>
+</body>
+</html>

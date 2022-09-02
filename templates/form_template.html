@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    {{ super() }}
+    <form method="post">
+        {{ form_t.hidden_tag() }}
+        {{ form_t.name_form.label }} {{ form_t.name_form(size=20) }}
+        <table>
+            {% for subfield in form_t.radio_form %}
+                <tr>
+                    <td>{{ subfield.label }}</td>
+                    <td>{{ subfield }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <div>
+            {{ form_t.date_form }}
+        </div>
+        <div>
+            {{ form_t.select_form }}
+        </div>
+        {{ form_t.submit_form() }}
+    </form>
+{% endblock %}

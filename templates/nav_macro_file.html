@@ -1,0 +1,7 @@
+{% macro nav_macro(nav_dict_t) %}
+<ul class="nav">
+    {% for key, value in nav_dict_t.items() %}
+    <li><a href="{{ value }}">{{ key }}</a></li>
+    {% endfor %}
+</ul>
+{% endmacro %}

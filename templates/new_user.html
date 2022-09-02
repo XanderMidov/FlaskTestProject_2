@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="Post">
+        {{ form_t.hidden_tag() }}
+        <table>
+            <tr>
+                <td>{{ form_t.name_form }}</td>
+                <td>{{ form_t.select_form }}</td>
+            </tr>
+            <tr>
+                <td>{{ form_t.submit_form }}</td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+    <table>
+        <tr>
+            <td>Пользователи</td>
+        </tr>
+        {% for user_t, role_t in users_t %}
+            <tr>
+                <td>{{ user_t }}</td>
+                <td>{{ role_t }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,62 @@
+.nav{
+    /*border: forestgreen medium solid;*/
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    /*float: left;*/
+}
+.nav li{
+    /*border: forestgreen medium solid;*/
+    /*padding: 10px;*/
+
+}
+.nav li a{
+    text-decoration: none;
+    color: darkblue;
+    display: block;
+    border: red medium solid;
+    margin: 1px;
+    padding: 10px;
+    width: 10em;
+    background: moccasin;
+}
+
+.nav li a:hover{
+    background: lightcoral;
+    color: cornsilk;
+    border: blueviolet medium solid;
+}
+
+.nav2{
+    /*float: left;*/
+}
+
+#nav_block {
+    border: blue medium solid;
+    background: lightblue;
+    width: 500px;
+    /*float: left;*/
+}
+.nav_div{
+    border: blue medium solid;
+    background: lightblue;
+    width: 200px;
+    /*float: left;*/
+}
+#nav_main{
+    float: left;
+}
+
+#content{
+    border: red thin solid;
+    float: left;
+    padding: 10px;
+}
+
+#date_form{
+    margin: 10px;
+}
+
+#select_form{
+    margin: 10px;
+}

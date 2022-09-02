@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="POST">
+    {{ form_t.hidden_tag() }}
+        <table>
+            <tr>
+                <td>{{ form_t.date_form.label }}</td>
+                <td>{{ form_t.date_form }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>{{ form_t.submit_form }}</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Наименование</td>
+                <td>Количество</td>
+                <td>Цена</td>
+            </tr>
+            {% for item in leftovers_t %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.count }}</td>
+                    <td>{{ item.price }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </form>
+{% endblock %}
